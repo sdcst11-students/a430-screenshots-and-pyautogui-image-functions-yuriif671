@@ -5,7 +5,7 @@ import time
 """
 locateOnScreen :
 find the location of your image and gives the location of the box as a tuple:
-(left,top,width,height) 
+(left,top,width,height)
 """
 location = pyautogui.locateOnScreen('assets/winIcon.png')
 print("locateOnScreen:", location)
