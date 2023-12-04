@@ -20,6 +20,12 @@ def purchaseBuildings():
         y -= 70
         n += 1
 
+def purchaseUpgrades():
+    py.moveTo(1150, 200)
+
+    for i in range(3):
+        py.click()
+
 def main():
     py.alert("Click 'Cookie' to activate CoockieClickerAuto", "CookieClickerAuto", "Cookie")
     
@@ -27,8 +33,14 @@ def main():
 
     while True:
         try:
-            clickCookie()
-            purchaseBuildings()
+            for i in range(5):
+                clickCookie()
+                purchaseBuildings()
+
+            for i in range(2):
+                clickCookie()
+                purchaseUpgrades()
+
         except Exception as e:
             print(e)
 
