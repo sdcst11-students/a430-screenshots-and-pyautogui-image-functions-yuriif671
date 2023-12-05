@@ -2,6 +2,9 @@ import pyautogui as py
 import keyboard
 import time
 
+#global flag which controls the main while loop
+active = True
+
 def clickCookie():
     py.moveTo('assets/bigcookie.png')
     for i in range(300):
@@ -39,7 +42,8 @@ def main():
 
             for i in range(2):
                 clickCookie()
-                purchaseUpgrades()
+            
+            purchaseUpgrades()
 
         except Exception as e:
             print(e)
